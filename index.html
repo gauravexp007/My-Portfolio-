@@ -886,6 +886,15 @@
     </footer>
 
     <script>
+        let theme_switch = document.getElementByClassName("theme-switch");
+        theme_switch.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                bodyElement.classList.add('dark-mode');
+            } else {
+                bodyElement.classList.remove('dark-mode');
+            }
+        });
         // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
