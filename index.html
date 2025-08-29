@@ -89,14 +89,7 @@
         }
         /* From Uiverse.io by Madflows */ 
 /* From Uiverse.io by Galahhad */ 
-        .dark{
-  background-color: black;
-  color: white;
-}
-.light{
-  background-color: white;
-  color: black;
-}
+       
          
 .theme-switch {
   --toggle-size: 20px;
@@ -329,7 +322,7 @@
                     <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-500">Contact</a>
                     <!-- From Uiverse.io by RiccardoRapelli --> 
                     <!-- From Uiverse.io by Galahhad --> 
-                    <button id ="dark-mode">
+                    
 <label class="theme-switch">
   <input type="checkbox" class="theme-switch__checkbox">
   <div class="theme-switch__container">
@@ -350,7 +343,7 @@
     </div>
   </div>
 </label>
-                    </button>
+                    
 
                 </div>
                 <div class="md:hidden flex items-center">
@@ -941,21 +934,7 @@
         sections.forEach(section => {
             observer.observe(section);
         });
-        let body = document.querySelector("body");
-let button = document.querySekector("#dark-mode");
-let currMode = "light";
-
-button.addEventListener("click", () => {
-  if (currMode === "light"){
-    currMode = "dark";
-    body.classList.add("dark");
-    body.classList.remove("light");
-  } else {
-    currMode = "light";
-    body.classList.add("light");
-    body.classList.remove("dark");
-  }
-});
+        
         // Background animation circles
         const bgAnimation = document.querySelector('.bg-animation');
         
