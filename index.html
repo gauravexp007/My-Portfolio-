@@ -89,36 +89,15 @@
         }
         /* From Uiverse.io by Madflows */ 
 /* From Uiverse.io by Galahhad */ 
-        .dark-mode {
-            --bg-gradient: var(--bg-gradient-dark);
-            --button-gradient: var(--button-gradient-dark);
-            --text-color: var(--text-color-dark);
-            --container-bg: var(--container-bg-dark);
-            --choice-bg: var(--choice-bg-dark);
-        }
-         :root {
-            /* Light theme variables */
-            --bg-gradient-light: linear-gradient(135deg, #6e8efb, #a777e3);
-            --button-gradient-light: linear-gradient(to right, #4776E6, #8E54E9);
-            --text-color-light: #333;
-            --container-bg-light: rgba(255, 255, 255, 0.9);
-            --choice-bg-light: #f8f9fa;
-            
-            /* Dark theme variables */
-            --bg-gradient-dark: linear-gradient(135deg, #232526, #414345);
-            --button-gradient-dark: linear-gradient(to right, #414345, #232526);
-            --text-color-dark: #f8f9fa;
-            --container-bg-dark: rgba(30, 30, 30, 0.9);
-            --choice-bg-dark: #2c2c2c;
-            
-            /* Current theme variables (default to light) */
-            --bg-gradient: var(--bg-gradient-light);
-            --button-gradient: var(--button-gradient-light);
-            --text-color: var(--text-color-light);
-            --container-bg: var(--container-bg-light);
-            --choice-bg: var(--choice-bg-light);
-        }
-
+        .dark{
+  background-color: black;
+  color: white;
+}
+.light{
+  background-color: white;
+  color: black;
+}
+         
 .theme-switch {
   --toggle-size: 20px;
   /* the size is adjusted using font-size,
@@ -350,6 +329,7 @@
                     <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-500">Contact</a>
                     <!-- From Uiverse.io by RiccardoRapelli --> 
                     <!-- From Uiverse.io by Galahhad --> 
+                    <button id ="dark-mode">
 <label class="theme-switch">
   <input type="checkbox" class="theme-switch__checkbox">
   <div class="theme-switch__container">
@@ -370,6 +350,7 @@
     </div>
   </div>
 </label>
+                    </button>
 
                 </div>
                 <div class="md:hidden flex items-center">
@@ -960,7 +941,21 @@
         sections.forEach(section => {
             observer.observe(section);
         });
-        
+        let body = document.querySelector("body");
+let button = document.getElementById("dark-mode");
+let currMode = "light";
+
+button.addEventListener("click", () => {
+  if (currMode === "light"){
+    currMode = "dark";
+    body.classList.add("dark");
+    body.classList.remove("light");
+  } else {
+    currMode = "light";
+    body.classList.add("light");
+    body.classList.remove("dark");
+  }
+});
         // Background animation circles
         const bgAnimation = document.querySelector('.bg-animation');
         
