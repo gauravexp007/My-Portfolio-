@@ -96,6 +96,29 @@
             --container-bg: var(--container-bg-dark);
             --choice-bg: var(--choice-bg-dark);
         }
+         :root {
+            /* Light theme variables */
+            --bg-gradient-light: linear-gradient(135deg, #6e8efb, #a777e3);
+            --button-gradient-light: linear-gradient(to right, #4776E6, #8E54E9);
+            --text-color-light: #333;
+            --container-bg-light: rgba(255, 255, 255, 0.9);
+            --choice-bg-light: #f8f9fa;
+            
+            /* Dark theme variables */
+            --bg-gradient-dark: linear-gradient(135deg, #232526, #414345);
+            --button-gradient-dark: linear-gradient(to right, #414345, #232526);
+            --text-color-dark: #f8f9fa;
+            --container-bg-dark: rgba(30, 30, 30, 0.9);
+            --choice-bg-dark: #2c2c2c;
+            
+            /* Current theme variables (default to light) */
+            --bg-gradient: var(--bg-gradient-light);
+            --button-gradient: var(--button-gradient-light);
+            --text-color: var(--text-color-light);
+            --container-bg: var(--container-bg-light);
+            --choice-bg: var(--choice-bg-light);
+        }
+
 .theme-switch {
   --toggle-size: 20px;
   /* the size is adjusted using font-size,
