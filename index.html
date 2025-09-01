@@ -89,73 +89,80 @@
             transform: scale(1.2);
         }
         /* From Uiverse.io by Wendell47 */ 
-#getInTouch {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 30px;
-  border: 0;
+/* From Uiverse.io by mrhyddenn */ 
+button {
   position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
   overflow: hidden;
-  border-radius: 10rem;
-  transition: all 0.02s;
-  font-weight: bold;
-  cursor: pointer;
-  color: rgb(18,28,28);
-  z-index: 0;
-  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
-    height: 8em;
-    width: 8em;
-
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-#getInTouch:hover {
-  background: rgb(193, 228, 248);
-  color: rgb(2,20,30);
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-#getInTouch:active {
-  transform: scale(0.97);
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
 }
 
-
-        
-
-.hoverEffect > div {
-  background: rgb(222, 0, 75);
-  background: linear-gradient(
-    90deg,
-    rgba(222, 0, 75, 1) 0%,
-    rgba(191, 70, 255, 1) 49%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  border-radius: 40rem;
-  width: 10rem;
-  height: 10rem;
-  transition: 0.4s;
-  filter: blur(20px);
-  animation: effect infinite 3s linear;
-  opacity: 0.5;
-}
-.hoverEffect{
-    height: 8em;
-    width: 8em;
+button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
 }
 
-        
-        
-
-        
-
-@keyframes effect {
-  0% {
-    transform: rotate(0deg);
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
   }
 
-  100% {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
   }
 }
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
         
         @import "https://unpkg.com/open-props/easings.min.css";
 
@@ -328,13 +335,10 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-                <div class="mt-8">
-                    <a href="#contact" id = "getInTouch" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md transition duration-300">Get In Touch
-                    <div class="hoverEffect">
-    <div></div>
-                    </div></a>
-                </div>
-            </div>
+                
+                </div><button id = "getInTouch">
+    Get In Touch
+</button>
             <div class="flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-200 shadow-xl">
                     <img src="admin.jpg" 
