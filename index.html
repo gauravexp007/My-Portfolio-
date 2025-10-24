@@ -150,10 +150,12 @@
 }
  /* From Uiverse.io by andrew-demchenk0 */ 
 .cube-loader {
-  position: inline;
+  position: relative;
+    display: inline-block;
+    padding: 20px;
 /* u can choose any size */
-  width: 45px;
-  height: 45px;
+  width: 75px;
+  height: 75px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
   animation: animate 4s linear infinite;
@@ -209,8 +211,8 @@
 
 .cube-top {
   position: absolute;
-  width: 45px;
-  height: 45px;
+  width: 75px;
+  height: 75px;
   background: hsl(330, 3.13%, 25.1%) 0%;
                       /* width 75px / 2 = 37.5px */
   transform: rotateX(90deg) translateZ(37.5px);
@@ -221,8 +223,8 @@
   content: '';
   position: absolute;
 /* u can choose any size */
-  width: 45px;
-  height: 45px;
+  width: 75px;
+  height: 75px;
   background: hsl(176.61, 42.28%, 40.7%) 19.6%;
   transform: translateZ(-90px);
   filter: blur(10px);
